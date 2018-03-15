@@ -13,6 +13,6 @@ for n in range(1,100):
         html_2 = requests.get(movie_url)
         html_2.encoding = 'gb2312'
         info = re.findall('<a href="(.*?)">.*?</a></td>', html_2.text)
-        with open('.\movies.txt', 'a', encoding='utf-8') as f:
+        with open('dyttspider\movies.txt', 'a', encoding='utf-8') as f:
             f.write(info[0] + '\n')
     time.sleep(2)
